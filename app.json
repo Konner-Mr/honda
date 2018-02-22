@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/login/login",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/remind/remind",
+    "pages/news/news",
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,20 +11,29 @@
     "navigationBarTitleText": "广汽 Honda",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "position":"bottom",
-    "color":"#ffffff",
-    "selectedColor":"#8a213a",
-    "backgroundColor":"#434343",
-    "list":[{
-        "pagePath":"pages/login/login",
-        "text":"提醒"
-      },{
-        "pagePath": "pages/login/login",
-        "text": "资讯"
-      },{
-        "pagePath": "pages/login/login",
-        "text": "我"
+  "tabBar": {
+    "position": "bottom",
+    "color": "#ffffff",
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#434343",
+    "list": [
+      {
+        "pagePath": "pages/remind/remind",
+        "text": "提醒",
+        "iconPath":"images/tabBar/remind.png",
+        "selectedIconPath":"images/tabBar/remind_s.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "images/tabBar/news.png",
+        "selectedIconPath": "images/tabBar/news_s.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我",
+        "iconPath": "images/tabBar/mine.png",
+        "selectedIconPath": "images/tabBar/mine_s.png"
       }
     ]
   }

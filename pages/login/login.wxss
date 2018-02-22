@@ -1,1 +1,27 @@
 /* pages/login/login.wxss */
+.login .form_box{
+  position:absolute;
+  top: 25%;
+  width: 100%;
+}
+
+.login .form_box .form_group{
+  width: 60%;
+  margin: 0 auto 20px;
+}
+
+.login .form_group #inviteCode{
+  background: #fff;
+  padding: 8px;
+  text-align: center;
+  box-shadow:0px 0px 5px 3px rgba(0,0,0,.5) inset;
+}
+
+.login .form_group #btn-confirm{
+  padding: 0;
+  margin: 0 auto;
+  width: 252rpx;
+  height: 73rpx;
+  background-color: unset;
+  border-radius: unset;
+}

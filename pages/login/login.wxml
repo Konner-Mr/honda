@@ -1,8 +1,14 @@
 <!--pages/login/login.wxml-->
-<view class="container">
-  <text>输入邀请码</text>
-  <form bindsubmit="loginSubmit">
-  
+<view class='wrap login'>
+  <image src="../../images/bg_login.png" mode='widthFix'></image>
+  <form class='form_box' bindsubmit='loginSubmit'>
+    <view class='form_group'>
+      <input placeholder='请输入邀请码' id='inviteCode' name='inviteCode' placeholder-class='input-placeholder'></input>
+    </view>
+    <view class='form_group'>
+      <button formType="submit" id='btn-confirm'>
+        <image src='../../images/btn_confirm.png' mode='widthFix'></image>
+      </button>
+    </view>
   </form>
 </view>
-
