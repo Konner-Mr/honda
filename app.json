@@ -6,8 +6,25 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "广汽 Honda",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "position":"bottom",
+    "color":"#ffffff",
+    "selectedColor":"#8a213a",
+    "backgroundColor":"#434343",
+    "list":[{
+        "pagePath":"pages/login/login",
+        "text":"提醒"
+      },{
+        "pagePath": "pages/login/login",
+        "text": "资讯"
+      },{
+        "pagePath": "pages/login/login",
+        "text": "我"
+      }
+    ]
   }
 }

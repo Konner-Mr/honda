@@ -1,2 +1,8 @@
 <!--pages/login/login.wxml-->
-<text>输入邀请码</text>
+<view class="container">
+  <text>输入邀请码</text>
+  <form bindsubmit="loginSubmit">
+  
+  </form>
+</view>
+
