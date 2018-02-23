@@ -48,7 +48,7 @@ App({
     wx.request({
       url: url,
       data: data,
-      header: {'content-type':'application/x-www-form-urlencoded'},
+      header: { 'content-type': 'application/x-www-form-urlencoded' },
       method: 'POST',
       dataType: 'json',
       success: function (res) {
