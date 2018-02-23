@@ -13,11 +13,10 @@ App({
     // 登录
     wx.login({
       success: res => {
-        console.log(res.code);
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
         this.requestAction('https://7e.7-event.cn/d/ci/7e/ApiWeChat/loginAction/6', { code: res.code }, function (res){
           console.log(res);
-        })
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        });
       }
     })
 
