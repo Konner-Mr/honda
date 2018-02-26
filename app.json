@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/init/init",
     "pages/login/login",
     "pages/remind/remind",
     "pages/news/news",
@@ -8,7 +9,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "广汽 Honda",
+    "navigationBarTitleText": "广汽本田特约店培训",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -20,8 +21,8 @@
       {
         "pagePath": "pages/remind/remind",
         "text": "提醒",
-        "iconPath":"images/tabBar/remind.png",
-        "selectedIconPath":"images/tabBar/remind_s.png"
+        "iconPath": "images/tabBar/remind.png",
+        "selectedIconPath": "images/tabBar/remind_s.png"
       },
       {
         "pagePath": "pages/news/news",

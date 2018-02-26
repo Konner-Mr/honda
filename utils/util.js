@@ -9,11 +9,16 @@ const formatTime = date => {
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
+const getNowTimestamp = any =>{
+  return (Date.parse(new Date()) / 1000);
+}
+
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getNowTimestamp: getNowTimestamp
 }
