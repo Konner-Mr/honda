@@ -2,6 +2,7 @@
   "pages": [
     "pages/init/init",
     "pages/login/login",
+    "pages/tip/tip",
     "pages/remind/remind",
     "pages/news/news",
     "pages/mine/mine"
