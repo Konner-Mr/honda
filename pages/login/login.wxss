@@ -2,7 +2,6 @@
 .login .form_box{
   position:absolute;
   top: 25%;
-  width: 100%;
 }
 
 .login .form_box .form_group{

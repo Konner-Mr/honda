@@ -1,6 +1,6 @@
 /**app.wxss**/
 
-image{width: 100%;}
+view,form,image{width: 100%;}
 
 .wrap {
   height: 100%;

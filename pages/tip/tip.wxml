@@ -1,2 +1,10 @@
 <!--pages/tip/tip.wxml-->
-<text>pages/tip/tip.wxml</text>
+<view class='wrap tip'>
+  <image src='../../images/tip_banner.jpg' mode='widthFix'></image>
+  <image src='../../images/tip_bg.jpg' mode='widthFix'></image>
+  <view class='btn_box'>
+    <button id='btn-fillIn' bindtap='fillIn'>
+      <image src='../../images/btn_fill_in.png' mode='widthFix'></image>
+    </button>
+  </view>
+</view>

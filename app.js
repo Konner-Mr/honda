@@ -5,43 +5,47 @@ App({
   globalData: {
     _session_id:'',
     _session_id_3rd:'',
+    url:{
+      login:'https://7e.7-event.cn/d/ci/7e/ApiWeChat/loginAction/6',
+      verifyInviteCode:'https://7e.7-event.cn/d/ci/7e/ApiWeChat/verifyInviteCodeAction/6'
+    },
     step:-1
   },
   onLaunch: function () {
     var that = this;
 
-    // 显示加载状态
+    /*// 显示加载状态
     wx.showLoading({title: '加载中',mask: true});
 
     // 登陆
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        that.requestAction('https://7e.7-event.cn/d/ci/7e/ApiWeChat/loginAction/6', { code: res.code }, function (result) {
+        that.requestAction(that.globalData.url['login'], { code: res.code }, function (result) {
           wx.hideLoading();
           if (result.error == 1) {
             that.showMsgAction(result.msg);
           } else {
-            that._session_id = result.session_id;
-            that._session_id_3rd = result.session_id_3rd;
-            that.step = result.step;
+            that.globalData._session_id = result.session_id;
+            that.globalData._session_id_3rd = result.session_id_3rd;
 
-            if (that.step == -1) {
+            that.globalData.step = result.step;
+            if (that.globalData.step == -1) {
               wx.redirectTo({ url: '/pages/login/login' });
-            } else if (that.step == 0) {
+            } else if (that.globalData.step == 0) {
               wx.redirectTo({ url: '/pages/tip/tip' });
             } else {
-              wx.redirectTo({ url: '/pages/remind/remind' });
+              wx.switchTab({ url: '/pages/remind/remind' });
             }
           }
         });
       }
-    });
+    });*/
   },
   requestAction: function (url, data, callback) {
     var header = { 'content-type': 'application/x-www-form-urlencoded' };
-    if (this._session_id != '') {
-      header['Cookie'] = 'ci_session='+this._session_id;
+    if (this.globalData._session_id != '') {
+      header['Cookie'] = 'ci_session=' + this.globalData._session_id;
     }
 
     wx.request({

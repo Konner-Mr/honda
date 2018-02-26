@@ -1,1 +1,15 @@
 /* pages/tip/tip.wxss */
+.tip .btn_box{
+  position:absolute;
+  bottom: 100rpx;
+}
+
+.tip .btn_box #btn-fillIn{
+  padding: 0;
+  margin: 0 auto;
+  width: 252rpx;
+  height: 73rpx;
+  background-color: unset;
+  border-radius: unset;
+  box-shadow: -2px 1px 6px 4px rgba(0,0,0,0.5);
+}

@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/mine/mine",
     "pages/init/init",
     "pages/login/login",
     "pages/tip/tip",
     "pages/remind/remind",
-    "pages/news/news",
-    "pages/mine/mine"
+    "pages/news/news"
   ],
   "window": {
     "backgroundTextStyle": "light",
