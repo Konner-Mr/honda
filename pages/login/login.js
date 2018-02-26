@@ -7,6 +7,8 @@ Page({
     var inviteCode = e.detail.value.inviteCode;
     if (inviteCode == '') {
       app.showMsgAction('请输入邀请码')
+    }else{
+      
     }
   }
 })
