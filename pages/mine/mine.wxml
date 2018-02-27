@@ -2,77 +2,76 @@
 <view class='wrap mine'>
   <image src='../../images/mine_banner.png' mode='widthFix'></image>
   <form class='form_box' bindsubmit='regSubmit'>
-    <view class='section'>
-      <view class="section__title">店铺代码</view>
-      <input value='' placeholder='请输入6位代码' class='form_control'></input>
+    <view class='section dix-fl dix-ml-1'>
+      <view class="section__title">{{formFields.A}}</view>
+      <input class='form_control' name='A' value="{{formData.A}}" disabled='disabled'></input>
     </view>
-    <view class='section'>
-      <view class="section__title">职务</view>
-      <picker class='form_control' bindchange="positionChange" value="{{index}}" range="{{positionList}}">
+    <view class='section dix-fl dix-ml-1'>
+      <view class="section__title">{{formFields.position}}</view>
+      <input placeholder='请输入' class='form_control' name='position' value="{{formData.position}}"></input>
+    </view>
+    <view class='section dix-fl dix-fl'>
+      <view class='dix-fl-1'>
+        <view class="section__title">{{formFields.full_name}}</view>
+        <input placeholder='请输入' class='form_control' name='full_name' value="{{formData.full_name}}"></input>
+      </view>
+      <view class='dix-fl-1'>
+        <view class="section__title">{{formFields.mobile}}</view>
+        <input placeholder='请输入' class='form_control dix-w-1' name='mobile' value="{{formData.mobile}}"></input>
+      </view>
+    </view>
+    <view class='section dix-fl'>
+      <view class="section__title">{{formFields.B}}</view>
+      <picker class='form_control dix-w-2' name='B' id='B' bindchange="pickerChange" value="{{formData.B}}" range="{{formAnswer.B}}">
           <view class="picker">
-              {{positionList[index]}}
+              {{formAnswer.B[formData.B]}}
           </view>
       </picker>
     </view>
-    <!--<view class='clearfix'>
-      <view class='section left'>
-        <text class='field'>姓名</text>
-        <input value='' placeholder='请输入' class='form_control'></input>
+    <view class='section dix-fl'>
+      <view class='dix-fl-1'>
+        <view class="section__title">{{formFields.C}}</view>
+        <picker class='form_control dix-w-3' name='C' id='C' bindchange="pickerChange" value="{{formData.C}}" range="{{formAnswer.C}}">
+          <view class="picker">
+              {{formAnswer.C[formData.C]}}
+          </view>
+        </picker>
       </view>
-      <view class='section left mobile'>
-        <text class='field'>联系电话</text>
-        <input value='' placeholder='请输入' class='form_control'></input>
+      <view class='dix-fl-1'>
+        <view class="section__title">{{formFields.D}}</view>
+        <picker class='form_control dix-w-3' name='D' id='D' bindchange="pickerChange" value="{{formData.D}}" range="{{formAnswer.D}}">
+          <view class="picker">
+              {{formAnswer.D[formData.D]}}
+          </view>
+        </picker>
       </view>
-    </view>
-    
-    <view class='clearfix'>
-      <view class='section clearfix'>
-        <text class='field'>报名班次</text>
-        <picker class='form_control reg' bindchange="shiftChange" value="{{field}}" range="{{field_array}}">
-            <view class="picker">
-                {{field_array[filed]}}
-            </view>
+      <view class='dix-fl-1'>
+        <view class="section__title">{{formFields.E}}</view>
+        <picker class='form_control dix-w-4' name='E' id='E' bindchange="pickerChange" value="{{formData.E}}" range="{{formAnswer.E}}">
+          <view class="picker">
+              {{formAnswer.E[formData.E]}}
+          </view>
         </picker>
       </view>
     </view>
-    <view class='clearfix'>
-      <view class='section left'>
-        <text class='field'>到达日期</text>
-        <picker class='form_control array' mode="date" value="{{array_date}}" start="2018-03-15" end="2018-04-15" bindchange="ArrayDateChange">
-            <view class="picker">
-                {{array_date}}
-            </view>
-        </picker>
+    <view class='section dix-fl'>
+      <view class='dix-fl-1'>
+        <view class="section__title">{{formFields.F}}</view>
+        <input placeholder='请输入' class='form_control' name='F' value="{{formData.F}}"></input>
       </view>
-      <view class='section left'>
-        <text class='field'>离开日期</text>
-        <picker class='form_control leave' mode="date" value="{{leave_date}}" start="2018-03-15" end="2018-04-15" bindchange="leaveDateChange">
-            <view class="picker">
-                {{leave_date}}
-            </view>
-        </picker>
-      </view>
-      <view class='section left'>
-        <text class='field'>住房情况</text>
-        <picker class='form_control housing' bindchange="housingChange" value="{{housing}}" range="{{housing_array}}">
-            <view class="picker">
-                {{housing_array[housing]}}
-            </view>
-        </picker>
+      <view class='dix-fl-1'>
+        <view class="section__title">{{formFields.G}}</view>
+        <input placeholder='请输入' class='form_control dix-w-1' name='G' value="{{formData.G}}"></input>
       </view>
     </view>
-    <view class='clearfix'>
-      <view class='section left'>
-        <text class='field'>到达航班</text>
-        <input value='' placeholder='请输入' class='form_control'></input>
-      </view>
-      <view class='section left mobile'>
-        <text class='field'>离开航班</text>
-        <input value='' placeholder='请输入' class='form_control'></input>
-      </view>
+    <view class='section dix-fl'>
+      <text class='tip'>Ps备注 :</text>
+      <text class='tip'>培训开课前一周，资料填写将关闭修改，请认真填写资料，以免影响后续使用！</text>
     </view>
-    <view class='tips tip'>Ps备注</view>
-    <view class='tips'>培训开课前一周，资料填写将关闭修改，请认真填写资料，以免影响后续使用！</view>
-    <image class='confirm' src='../../images/btn_confirm.png' mode='widthFix'></image>-->
+    <view class='section dix-fl dix-w-5'>
+      <button formType="submit" class='btn'>
+        <image src='../../images/btn_confirm.png' mode='widthFix'></image>
+      </button>
+    </view>
   </form>
 </view>

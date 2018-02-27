@@ -3,7 +3,7 @@
   <image src='../../images/tip_banner.jpg' mode='widthFix'></image>
   <image src='../../images/tip_bg.jpg' mode='widthFix'></image>
   <view class='btn_box'>
-    <button id='btn-fillIn' bindtap='fillIn'>
+    <button class='btn' bindtap='fillIn'>
       <image src='../../images/btn_fill_in.png' mode='widthFix'></image>
     </button>
   </view>

@@ -13,6 +13,15 @@ const getNowTimestamp = any =>{
   return (Date.parse(new Date()) / 1000);
 }
 
+const inArray = (search, array) => {
+  for (var i in array) {
+    if (array[i] == search) {
+      return true;
+    }
+  }
+  return false;
+}
+
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -20,5 +29,6 @@ const formatNumber = n => {
 
 module.exports = {
   formatTime: formatTime,
-  getNowTimestamp: getNowTimestamp
+  getNowTimestamp: getNowTimestamp,
+  inArray: inArray
 }

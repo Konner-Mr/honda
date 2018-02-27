@@ -16,3 +16,13 @@ view,form,image{width: 100%;}
   font-style: "italic";
   color: "#959595";
 }
+
+.btn{
+  padding: 0;
+  margin: 0 auto;
+  width: 252rpx;
+  height: 73rpx;
+  background-color: unset;
+  border-radius: unset;
+  box-shadow: -2px 1px 6px 4px rgba(0,0,0,0.5);
+}

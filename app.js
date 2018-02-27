@@ -3,18 +3,23 @@ const util = require('utils/util.js');
 
 App({
   globalData: {
-    _session_id:'',
-    _session_id_3rd:'',
-    url:{
-      login:'https://7e.7-event.cn/d/ci/7e/ApiWeChat/loginAction/6',
-      verifyInviteCode:'https://7e.7-event.cn/d/ci/7e/ApiWeChat/verifyInviteCodeAction/6'
+    _session_id: '',
+    _session_id_3rd: '',
+    url: {
+      login: 'https://7e.7-event.cn/d/ci/7e/ApiWeChat/loginAction/6',
+      verify: 'https://7e.7-event.cn/d/ci/7e/ApiWeChat/verifyAction/6',
+      reg: 'https://7e.7-event.cn/d/ci/7e/ApiWeChat/regAction/6'
     },
-    step:-1
+    step: -1,
+    formData: null,
+    formFields: null,
+    formAnswer: null,
+    formMustFillIn: null
   },
   onLaunch: function () {
     var that = this;
 
-    /*// 显示加载状态
+    // 显示加载状态
     wx.showLoading({title: '加载中',mask: true});
 
     // 登陆
@@ -30,6 +35,10 @@ App({
             that.globalData._session_id_3rd = result.session_id_3rd;
 
             that.globalData.step = result.step;
+            that.globalData.formData = result.formData;
+            that.globalData.formFields = result.formFields.show;
+            that.globalData.formAnswer = result.formFields.answer;
+            that.globalData.formMustFillIn = result.formFields.mustFillIn;
             if (that.globalData.step == -1) {
               wx.redirectTo({ url: '/pages/login/login' });
             } else if (that.globalData.step == 0) {
@@ -40,7 +49,7 @@ App({
           }
         });
       }
-    });*/
+    });
   },
   requestAction: function (url, data, callback) {
     var header = { 'content-type': 'application/x-www-form-urlencoded' };

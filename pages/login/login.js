@@ -3,23 +3,51 @@
 const app = getApp();
 
 Page({
+  data: {
+    indexH: 0,
+    formFields: null,
+    formAnswer: null
+  },
+  onLoad: function () {
+    this.setData({
+      formFields: app.globalData.formFields,
+      formAnswer: app.globalData.formAnswer
+    });
+  },
+  pickerChange:function (e) {
+    this.setData({
+      indexH: e.detail.value
+    })
+  },
   loginSubmit:function(e){
-    var inviteCode = e.detail.value.inviteCode;
-    if (inviteCode == '') {
-      app.showMsgAction('请输入邀请码')
-    }else{
-      app.requestAction(app.globalData.url['verifyInviteCode'], { session_id_3rd: app.globalData._session_id_3rd, inviteCode: inviteCode }, function (result) {
-        if(result.error==1){
-          app.showMsgAction(result.msg);
-        }else{
-          app.globalData.step = result.step;
-          if (app.globalData.step == 0) {
-            wx.redirectTo({ url: '/pages/tip/tip' });
-          } else {
-            wx.redirectTo({ url: '/pages/remind/remind' });
-          }
-        }
-      });
+    var regIDNumber = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+    var formData = e.detail.value;
+    for (var i in formData) {
+      if (formData[i] === '') {
+        app.showMsgAction('请输入' + this.data.formFields[i]);
+        return false;
+      } else if (formData[i] === 0) {
+        app.showMsgAction('请选择' + this.data.formFields[i]);
+        return false;
+      } else if (i == 'id_number' && regIDNumber.test(formData[i]) === false) {
+        app.showMsgAction(this.data.formFields[i] + '格式错误');
+        return false;
+      }
     }
+
+    formData.session_id_3rd = app.globalData._session_id_3rd;
+    app.requestAction(app.globalData.url['verify'], formData, function (result) {
+      if (result.error == 1) {
+        app.showMsgAction(result.msg);
+      } else {
+        app.globalData.step = result.step;
+        app.globalData.formData = result.formData;
+        if (app.globalData.step == 0) {
+          wx.redirectTo({ url: '/pages/tip/tip' });
+        } else {
+          wx.redirectTo({ url: '/pages/remind/remind' });
+        }
+      }
+    });
   }
 })

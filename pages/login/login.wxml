@@ -3,10 +3,23 @@
   <image src="../../images/bg_login.png" mode='widthFix'></image>
   <form class='form_box' bindsubmit='loginSubmit'>
     <view class='form_group'>
-      <input placeholder='请输入邀请码' id='inviteCode' name='inviteCode' placeholder-class='input-placeholder'></input>
+      <picker class='form_control dix-w-2' class='form_control' id='H' name='H' bindchange="pickerChange" value="{{indexH}}" range="{{formAnswer.H}}">
+          <view class="picker">
+              {{formAnswer.H[indexH]}}
+          </view>
+      </picker>
     </view>
     <view class='form_group'>
-      <button formType="submit" id='btn-confirm'>
+      <input placeholder="请输入{{formFields.A}}" class='form_control' id='A' name='A' placeholder-class='input-placeholder'></input>
+    </view>
+    <view class='form_group'>
+      <input placeholder="请输入{{formFields.full_name}}" class='form_control' id='full_name' name='full_name' placeholder-class='input-placeholder'></input>
+    </view>
+     <view class='form_group'>
+      <input placeholder="请输入{{formFields.id_number}}" class='form_control' id='id_number' name='id_number' placeholder-class='input-placeholder'></input>
+    </view>
+    <view class='form_group'>
+      <button formType="submit" class='btn'>
         <image src='../../images/btn_confirm.png' mode='widthFix'></image>
       </button>
     </view>
