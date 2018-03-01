@@ -1,1 +1,75 @@
 /* pages/remind/remind.wxss */
+view{width: auto;}
+.banner {width: 100%;}
+.banner image{width: 100%;}
+.box{width: 85%;background: #fff;margin: 20px auto;padding: 5% 5% 7% 5%;box-shadow: 0 0 20px 4px rgba(0,0,0,.2);position: relative;}
+.icon1{display: block;width: 70px;position: absolute;right: 5px;top: -8px;}
+.icon{width: 15px;vertical-align: middle;}
+.close{width: 30rpx;position: absolute;bottom: 15rpx;right: 15rpx;}
+.refresh{width: 30rpx;position: absolute;bottom: 15rpx;right: 60rpx;}
+
+/* 天气 */
+.text1{font-size: 50rpx;vertical-align: middle;font-weight: bold;letter-spacing: 15px;margin-left: 10px;}
+.wether_left{float: left;}
+.wether_right{float: left;margin-left: 35px;}
+.day{text-indent: 0.3em}
+.date{font-size: 20rpx;text-indent: 1em}
+.temperature_left{float: left;font-size: 37px;font-weight: bold}
+.temperature_right{float: left;margin-left: 10px;}
+.temperature_right view{font-size: 13px;line-height: 20px;}
+
+/* 航班 */
+.table{z-index: 100}
+.text2{color: #c5001f;font-weight: bold;}
+.th{width: 50%;float: left;margin: 8px 0 0;font-size: 14px;color: #e02441;}
+.text3{font-size: 28px;color: #000;font-weight: 600;}
+.icon2{width: 15px;margin-left: 11px;}
+.thead{width: 80%;background-color: #c5001f;color: #fff;padding: 5px;margin: 10px 0;border-radius: 5px;font-size: 18px;}
+.plane_time{margin-left: 40px}
+.tbody1{width: 33.3%;float: left;font-size: 14px;color: #e02441;}
+.tbody2{width: 33.3%;float: left;font-size: 18px;font-weight: bold;}
+.icon5{width: 35%;position: absolute;right: 10px;top: 50px;z-index: 0;}
+.plane_box{position: relative;z-index: 100}
+
+/* 当前日程 */
+.schedule{padding: 0 0 5% 0;width: 95%;}
+.text4{font-weight: bold;color: #fff;background: #000;padding: 3% 5%;margin-bottom: 20px;}
+.schedule_left{float: left;width: 25%;}
+.schedule_right{float: left;width: 65%;margin-left: 5%;}
+.icon6{width: 100%;margin-left: 20px;margin-top: 20px;}
+.icon4{width: 15px;vertical-align: middle}
+.text5{font-size: 18px;margin-left: 8px;font-weight: bold;vertical-align: middle;}
+.text6{font-size: 12px;margin-left: 8px;}
+.text7{margin-left: 25px;}
+.text8{font-size: 30rpx;color: #e02441}
+.text9{font-size: 13px;margin-left: 8px;font-weight: bold;vertical-align: middle;color: #c5c5c5;}
+.text10{color: #7d7d7d}
+.icon3{margin-left: 30px;}
+.hr{width: 85%;height: 3px;background: #000;margin: 10px auto;}
+
+/* 会务联系 */
+.icon8{width: 20px;}
+.icon9{width: 110px;}
+.icon10{width: 20px;vertical-align: middle;}
+.text11{font-size: 45rpx;color: #c5001f;font-weight: bold;}
+.text12{font-size: 48rpx;font-weight: bold;margin: 8px 0;}
+.text13{font-size: 30rpx;letter-spacing: 3px;vertical-align: middle;}
+
+/* 培训总日程 */
+.text14{font-weight: bold;color: #fff;text-align: center;background: #c4001e;padding: 10px;}
+.icon1_left{display: block;width: 70px;position: absolute;left: 5px;top: -8px;transform: rotateY(180deg)}
+.schedule_table{width: 90%;margin: 3px auto;}
+.table_title{color: #da0028;text-align: center;background: #000;padding: 5px 0; font-weight: bold;}
+.td1{width: 28%;margin:1% 1% 0 0;}
+.td2{width: 48%;margin:1% 1%;}
+.td3{width: 20%;margin:1% 1% 0 0;}
+.tr1 view{background: #313131;color: #fff;text-align: center;padding: 5px 0;font-size: 12px;}
+.tr2 view{background: #959595;color: #fff;text-align: center;padding: 5px 0;font-size: 12px;}
+.tr3 view{background: #dcdcdc;color: #fff;text-align: center;padding: 5px 0;font-size: 12px;}
+.tr4 view{background: #c4001e;color: #fff;text-align: center;padding: 5px 0;font-size: 12px;}
+.tr2 .td2{color: #000;}
+.tr2 .td3{color: #000;}
+.tr3 .td2{color: #000;}
+.tr3 .td3{color: #000;}
+.tr4 .td2{color: #000;}
+.tr4 .td3{color: #000;}

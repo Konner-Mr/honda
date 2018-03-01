@@ -1,1 +1,25 @@
 /* pages/news/news.wxss */
+.swiper {
+  height: 400rpx;
+  width: 95%;
+  margin: 0 auto;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.wrap{margin: 0;padding: 0;}
+.head{position: relative;z-index: 100;}
+.banner{margin-top: -60rpx;z-index: 10}
+.new{width: 90%;margin: 35rpx auto 0;}
+.new_img{width: 45%;}
+.more{width: 22%;height: 55rpx;background: #db2521;color: #fff;float: right;line-height: 55rpx;font-size: 28rpx;}
+.date{width: 20%;}
+.info_title{width: 75%;margin-left: 5%;}
+.info_title view{font-size: 27rpx;line-height: 45rpx;}
+.title{color: #db2521;}
+.day{width: 100%;text-align: center;background:#db2521;color: #fff; padding: 20rpx 0;border-radius: 4px 4px 0 0;font-weight: bold;position: relative;z-index: 100;}
+.shadow{width: 60%;height: 2rpx;background: rgba(0,0,0,.2);margin: 0 auto;box-shadow: 0 0 5px 5px rgba(0,0,0,.1);z-index: 0;border-radius: 25%;}
+.month{width: 100%;text-align: center;color: #db2521;margin-top: 15rpx;}
+.info_box{margin: 20rpx 0 0;border-bottom: 1px dashed #ccc;padding: 15rpx 0;}
+.info2{margin-top: -75rpx} 

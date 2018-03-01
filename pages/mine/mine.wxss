@@ -5,17 +5,27 @@
 .dix-w-1{width: 320rpx !important;}
 .dix-w-2{width: 615rpx !important;}
 .dix-w-3{width: 180rpx !important;}
-.dix-w-4{width: 165rpx !important;}
-.dix-w-5{width: 640rpx !important;}
-.dix-ml-1{margin-left: 120rpx !important;}
+.dix-w-4{width: 166rpx !important;}
+.dix-w-5{width: 639rpx !important;}
+.dix-pl-1{padding-left: 120rpx !important;}
+
+.mine .barcode{
+  position: absolute;
+  top:95rpx;
+  left:235rpx;
+  width:300rpx;
+  height:300rpx;
+}
 
 .mine .form_box{
   position: absolute;
-  top: 9%;
+  top: 580rpx;
+  padding-bottom: 20rpx; 
 }
 
 .mine .form_box .section{
-  margin: 8rpx 50rpx;
+  width: auto;
+  padding: 8rpx 46rpx;
 }
 
 .mine .form_box .section .section__title{
@@ -35,7 +45,6 @@
 
 .mine .form_box .section .tip{
   display: block;
-  width: 640rpx;
   color: #b8021e;
   font-size: 22rpx;
 }

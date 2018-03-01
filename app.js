@@ -8,7 +8,8 @@ App({
     url: {
       login: 'https://7e.7-event.cn/d/ci/7e/ApiWeChat/loginAction/6',
       verify: 'https://7e.7-event.cn/d/ci/7e/ApiWeChat/verifyAction/6',
-      reg: 'https://7e.7-event.cn/d/ci/7e/ApiWeChat/regAction/6'
+      reg: 'https://7e.7-event.cn/d/ci/7e/ApiWeChat/regAction/6',
+      getWeather: 'https://7e.7-event.cn/d/ci/7e/ApiWeChat/getWeatherAction/6'
     },
     step: -1,
     formData: null,

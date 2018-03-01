@@ -7,7 +7,8 @@ Page({
   data: {
     formData: null,
     formFields: null,
-    formAnswer: null
+    formAnswer: null,
+    barcodeUrl:'https://7e.7-event.cn/d/s/t/'
   },
   onLoad:function(){
     this.setData({
@@ -47,7 +48,9 @@ Page({
       } else {
         app.globalData.step = result.step;
         app.globalData.formData = that.data.formData;
-        wx.redirectTo({ url: '/pages/remind/remind' });
+        app.showMsgAction(result.msg,function(){
+          wx.switchTab({ url: '/pages/remind/remind' });
+        });
       }
     });
   }

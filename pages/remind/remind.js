@@ -1,66 +1,40 @@
 // pages/remind/remind.js
+//获取应用实例
+const app = getApp();
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    show: {
+      weather: false,
+      flight: false
+    },
+    weather: null
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  onLoad: function () {
+    this.getWeatherAction();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  getWeatherAction: function () {
+    var that = this;
+    app.requestAction(app.globalData.url['getWeather'], { session_id_3rd: app.globalData._session_id_3rd }, function (result) {
+      if (result.error == 1) {
+        console.log(result.msg);
+      }
+    
+      that.setData({
+        weather: result.weather
+      });
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  close: function (event) {
+    var show = this.data.show;
+    show[event.currentTarget.dataset.type] = true;
+    this.setData({
+      show: show
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  refresh: function (event) {
+    if (event.currentTarget.dataset.type=='weather'){
+      this.getWeatherAction();
+    }
   }
 })

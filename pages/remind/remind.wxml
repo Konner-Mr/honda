@@ -1,2 +1,180 @@
 <!--pages/remind/remind.wxml-->
-<text>pages/remind/remind.wxml</text>
+<view class='wrap remind'>
+  <view class='banner'>
+    <image src='../../images/tip_banner.jpg' mode='widthFix'></image>
+  </view>
+
+  <!-- 天气  -->
+  <view class="box clearfix" hidden="{{show.weather}}">
+    <view class='wether_left'>
+      <image src='../../images/remind_icon3.png' mode='widthFix' class='icon'></image>
+      <text class='text1'>{{weather.city}}</text>
+      <image src="{{weather.weather_pic}}" mode='widthFix'></image>
+    </view>
+    <view class='wether_right'>
+      <view>{{weather.weekEn}}</view>
+      <view class='date'>{{weather.date}}</view>
+      <view class='day'>{{weather.week}}</view>
+      <view class='clearfix'>
+        <view class='temperature_left'>{{weather.temperature}}</view>
+        <view class='temperature_right'>
+          <view>{{weather.weather}}</view>
+          <view>{{weather.wind}}</view>
+          <view>{{weather.sd}}</view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <image src='../../images/remind_refresh.png' mode='widthFix' class='refresh' data-type='weather' bindtap='refresh'></image>
+    </view>
+    <view>
+      <image src='../../images/remind_close.png' mode='widthFix' class='close' data-type='weather' bindtap='close'></image>
+    </view>
+    <image src='../../images/remind_icon1.png' mode='widthFix' class='icon1'></image>
+  </view>
+
+  <!-- 航班 -->
+  <view class='box clearfix' hidden="{{show.flight}}">
+    <image src='../../images/remind_icon5.png' mode='widthFix' class='icon5'></image>
+    <view class='plane_box'>
+      <view class='text2'>航班信息</view>
+      <view class='table clearfix'>
+        <view class='th'>出发地</view>
+        <view class='th'>目的地</view>
+        <view class='th text3'>呼和浩特
+        <image src='../../images/remind_icon2.png' mode='widthFix' class='icon2'></image></view>
+        <view class='th text3'>北京</view>
+      </view>
+      <view class='table'>
+        <view class='thead'>
+        <text>登机时间</text>
+        <text class='plane_time'>7:30 星期三 3-15</text>
+        </view>
+      </view>
+      <view class='table_box'>
+        <view>
+          <view class='tbody1'>班次</view>
+          <view class='tbody1'>座位</view>
+          <view class='tbody1'>登机门</view>
+        </view>
+        <view>
+          <view class='tbody2'>FW134</view>
+          <view class='tbody2'>24F</view>
+          <view class='tbody2'>02</view>
+        </view>
+      </view>
+    </view>
+    <view bindtap='close'>
+      <image src='../../images/remind_close.png' mode='widthFix' class='close' data-type='flight' bindtap='close'></image>
+    </view>
+    <image src='../../images/remind_icon1.png' mode='widthFix' class='icon1'></image>
+  </view>
+  <!-- 日程 -->
+  <view class='box clearfix schedule'>
+    <view class='text4'>当前日程</view>
+    <view class='schedule_left'>
+      <image src='../../images/remind_icon6.png' mode='widthFix' class='icon6'></image>
+    </view>
+    <view class='schedule_right'>
+      <view>
+        <image src='../../images/remind_icon4.png' mode='widthFix' class='icon4'></image>
+        <text class='text5'>8:30-90:30 AM</text><text class='text6'>2018.3.15</text>
+      </view>
+      <view>
+        <text class='text5 text7'>开班仪式</text>
+        <image src='../../images/remind_icon3.png' mode='widthFix' class='icon4 icon3'></image><text class='text5'>雅阁馆</text>
+      </view>
+      <view class='hr'></view>
+      <view>
+        <view>
+          <text class='text8'>次 日程:</text>
+          <text class='text9'>9:45-10:45 AM 2018.3.15</text>
+        </view>
+        <view>
+          <text class='text5 text7 text10'>本品只是</text>
+          <image src='../../images/remind_icon7.png' mode='widthFix' class='icon4 icon3'></image><text class='text5 text10'>授课教室</text>
+        </view>
+      </view> 
+    </view>
+    <view bindtap='close'>
+      <image src='../../images/remind_close.png' mode='widthFix' class='close'></image>
+    </view>
+    <image src='../../images/remind_icon1.png' mode='widthFix' class='icon1'></image>
+  </view>
+
+  <!-- 会务联系 -->
+  <view class='box clearfix'>
+    <view class='left'>
+      <view class='text11'>会务联系</view>
+      <view class='text12'>联系人：谢宇杰</view>
+      <view>
+        <image src='../../images/remind_icon10.png' mode='widthFix' class='icon10'></image>
+        <text class='text13'>020-84431878</text>
+      </view>
+    </view>
+    <view class='left'>
+      <view>
+        <image src='../../images/remind_icon8.png' mode='widthFix' class='icon8'></image>
+        <image src='../../images/remind_icon8.png' mode='widthFix' class='icon8'></image>
+        <image src='../../images/remind_icon8.png' mode='widthFix' class='icon8'></image>
+        <image src='../../images/remind_icon8.png' mode='widthFix' class='icon8'></image>
+        <image src='../../images/remind_icon8.png' mode='widthFix' class='icon8'></image>
+      </view>
+      <view>
+        <image src='../../images/remind_icon9.png' mode='widthFix' class='icon9'></image>
+      </view>
+    </view>
+    <view bindtap='close'>
+      <image src='../../images/remind_close.png' mode='widthFix' class='close'></image>
+    </view>
+    <image src='../../images/remind_icon1.png' mode='widthFix' class='icon1'></image>
+  </view>
+
+  <!-- 培训总日程 -->
+  <view class='box schedule'>
+    <view class='text14'>培训总日程</view>
+    <view class='schedule_table'>
+      <view class='table_title'>2018.3.15　　One Day</view>
+      <view class='tr1 clearfix'>
+        <view class='td1 left'>时间</view>
+        <view class='td2 left'>内容</view>
+        <view class='td3 left'>地点</view>
+      </view>
+      <view class='tr2 clearfix'>
+        <view class='td1 left'>8:30-90:30</view>
+        <view class='td2 left'>开班仪式、雅阁历史、竞品</view>
+        <view class='td3 left'>雅阁馆</view>
+      </view>
+      <view class='tr3 clearfix'>
+        <view class='td1 left'>9:45-10:45</view>
+        <view class='td2 left'>本品知识</view>
+        <view class='td3 left'>授课教室</view>
+      </view>
+      <view class='tr2 clearfix'>
+        <view class='td1 left'>11:00-12:00</view>
+        <view class='td2 left'>各岗位课、观点碰撞</view>
+        <view class='td3 left'>授课教室</view>
+      </view>
+      <view class='tr4 clearfix'>
+        <view class='td1 left'>12:00-14:00</view>
+        <view class='td2 left'>午休</view>
+        <view class='td3 left'>酒店餐厅</view>
+      </view>
+      <view class='tr2 clearfix'>
+        <view class='td1 left'>14:00-16:30</view>
+        <view class='td2 left'>试乘试驾+微分享</view>
+        <view class='td3 left'>授课教室</view>
+      </view>
+      <view class='tr3 clearfix'>
+        <view class='td1 left'>16:30-17:30</view>
+        <view class='td2 left'>考核（课堂内容）</view>
+        <view class='td3 left'>授课教室</view>
+      </view>
+    </view>
+    <view bindtap='close'>
+      <image src='../../images/remind_close.png' mode='widthFix' class='close'></image>
+    </view>
+    <image src='../../images/remind_icon1.png' mode='widthFix' class='icon1_left'></image>
+    <image src='../../images/remind_icon1.png' mode='widthFix' class='icon1'></image>
+  </view>
+</view>

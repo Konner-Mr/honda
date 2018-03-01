@@ -1,2 +1,67 @@
 <!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<view class='wrap'>
+  <!-- 头部 -->
+  <view class='head'>
+    <image src='../../images/info1.png' mode='widthFix' class='img'></image>
+  </view>
+  <!-- 轮播 -->
+  <view class='banner'>
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicator_active_color}}">    
+      <block wx:for="{{movies}}" wx:for-index="index">    
+        <swiper-item>    
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
+        </swiper-item>    
+      </block>    
+    </swiper> 
+  </view>
+  <!-- 新闻动态 -->
+  <view class='new'>
+    <view>
+      <image src='../../images/new.png' mode='widthFix' class='new_img'></image>
+      <button class='more'>MORE</button>
+    </view>
+    <view class='info_box clearfix'>
+      <view class='left date'>
+      <view>
+        <view class='day'>15</view>
+        <view class='shadow'></view>
+      </view>
+        <view class='month'>4月</view>
+      </view>
+       <view class='left info_title'>
+        <view class='title'>我校受邀第四届河南省摄影金像奖作品展!</view>
+        <view>2016年3月10日，第四届河南省摄影金像奖作品展暨颁奖典礼隆重举行！金像高级...</view>
+      </view> 
+    </view>
+    <view class='info_box clearfix'>
+      <view class='left date'>
+        <view>
+          <view class='day'>15</view>
+          <view class='shadow'></view>
+        </view>
+        <view class='month'>4月</view>
+      </view>
+       <view class='left info_title'>
+        <view class='title'>我校受邀第四届河南省摄影金像奖作品展!</view>
+        <view>2016年3月10日，第四届河南省摄影金像奖作品展暨颁奖典礼隆重举行！金像高级...</view>
+      </view> 
+    </view>
+    <view class='info_box clearfix'>
+      <view class='left date'>
+        <view>
+          <view class='day'>15</view>
+          <view class='shadow'></view>
+        </view>
+        <view class='month'>4月</view>
+      </view>
+       <view class='left info_title'>
+        <view class='title'>我校受邀第四届河南省摄影金像奖作品展!</view>
+        <view>2016年3月10日，第四届河南省摄影金像奖作品展暨颁奖典礼隆重举行！金像高级...</view>
+      </view> 
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class='footer'>
+    <image src='../../images/info2.png' mode='widthFix' class='info2 img'></image>    
+  </view>
+</view>

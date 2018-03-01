@@ -1,16 +1,18 @@
 <!--pages/mine/mine.wxml-->
 <view class='wrap mine'>
+  <image src="{{barcodeUrl+formData.barcode}}" class='barcode'></image>
+  <image src='../../images/mine_barcode_bg.png' mode='widthFix'></image>
   <image src='../../images/mine_banner.png' mode='widthFix'></image>
   <form class='form_box' bindsubmit='regSubmit'>
-    <view class='section dix-fl dix-ml-1'>
+    <view class='section dix-fl dix-pl-1'>
       <view class="section__title">{{formFields.A}}</view>
       <input class='form_control' name='A' value="{{formData.A}}" disabled='disabled'></input>
     </view>
-    <view class='section dix-fl dix-ml-1'>
+    <view class='section dix-fl dix-pl-1'>
       <view class="section__title">{{formFields.position}}</view>
       <input placeholder='请输入' class='form_control' name='position' value="{{formData.position}}"></input>
     </view>
-    <view class='section dix-fl dix-fl'>
+    <view class='section dix-fl'>
       <view class='dix-fl-1'>
         <view class="section__title">{{formFields.full_name}}</view>
         <input placeholder='请输入' class='form_control' name='full_name' value="{{formData.full_name}}"></input>
@@ -64,7 +66,7 @@
         <input placeholder='请输入' class='form_control dix-w-1' name='G' value="{{formData.G}}"></input>
       </view>
     </view>
-    <view class='section dix-fl'>
+    <view class='section dix-fl dix-w-5'>
       <text class='tip'>Ps备注 :</text>
       <text class='tip'>培训开课前一周，资料填写将关闭修改，请认真填写资料，以免影响后续使用！</text>
     </view>
