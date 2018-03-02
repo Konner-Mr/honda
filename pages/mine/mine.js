@@ -32,7 +32,7 @@ Page({
       if (util.inArray(i, app.globalData.formMustFillIn) && formData[i] === '') {
         app.showMsgAction('请输入' + this.data.formFields[i]);
         return false;
-      } else if (util.inArray(i, app.globalData.formMustFillIn) && formData[i] === 0) {
+      } else if (util.inArray(i, app.globalData.formMustFillIn) && formData[i] == 0) {
         app.showMsgAction('请选择' + this.data.formFields[i]);
         return false;
       } else if (i == 'mobile' && regMobile.test(formData[i]) === false) {

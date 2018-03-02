@@ -23,11 +23,11 @@ view{width: auto;}
 .text2{color: #c5001f;font-weight: bold;}
 .th{width: 50%;float: left;margin: 8px 0 0;font-size: 14px;color: #e02441;}
 .text3{font-size: 28px;color: #000;font-weight: 600;}
-.icon2{width: 15px;margin-left: 11px;}
-.thead{width: 80%;background-color: #c5001f;color: #fff;padding: 5px;margin: 10px 0;border-radius: 5px;font-size: 18px;}
+.icon2{width: 15px;margin-left: 20px;}
+.thead{width: 95%;background-color: #c5001f;color: #fff;padding: 5px;margin: 10px 0;border-radius: 5px;font-size: 18px;}
 .plane_time{margin-left: 40px}
-.tbody1{width: 33.3%;float: left;font-size: 14px;color: #e02441;}
-.tbody2{width: 33.3%;float: left;font-size: 18px;font-weight: bold;}
+.tbody1{width: 25%;float: left;font-size: 14px;color: #e02441;text-align: center}
+.tbody2{width: 25%;float: left;font-size: 18px;font-weight: bold;text-align: center}
 .icon5{width: 35%;position: absolute;right: 10px;top: 50px;z-index: 0;}
 .plane_box{position: relative;z-index: 100}
 

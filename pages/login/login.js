@@ -26,7 +26,7 @@ Page({
       if (formData[i] === '') {
         app.showMsgAction('请输入' + this.data.formFields[i]);
         return false;
-      } else if (formData[i] === 0) {
+      } else if (formData[i] == 0) {
         app.showMsgAction('请选择' + this.data.formFields[i]);
         return false;
       } else if (i == 'id_number' && regIDNumber.test(formData[i]) === false) {

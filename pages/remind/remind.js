@@ -8,7 +8,8 @@ Page({
       weather: false,
       flight: false
     },
-    weather: null
+    weather: null,
+    flight: null
   },
   onLoad: function () {
     this.getWeatherAction();
