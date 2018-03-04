@@ -43,7 +43,7 @@ App({
             if (that.globalData.step == -1) {
               wx.redirectTo({ url: '/pages/login/login' });
             } else if (that.globalData.step == 0) {
-              wx.redirectTo({ url: '/pages/tip/tip' });
+              wx.redirectTo({ url: '/pages/mine/mine' });
             } else {
               wx.switchTab({ url: '/pages/remind/remind' });
             }

@@ -4,7 +4,6 @@ const app = getApp();
 
 Page({
   data: {
-    indexH: 0,
     formFields: null,
     formAnswer: null
   },
@@ -13,11 +12,6 @@ Page({
       formFields: app.globalData.formFields,
       formAnswer: app.globalData.formAnswer
     });
-  },
-  pickerChange:function (e) {
-    this.setData({
-      indexH: e.detail.value
-    })
   },
   loginSubmit:function(e){
     var regIDNumber = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
@@ -43,7 +37,7 @@ Page({
         app.globalData.step = result.step;
         app.globalData.formData = result.formData;
         if (app.globalData.step == 0) {
-          wx.redirectTo({ url: '/pages/tip/tip' });
+          wx.redirectTo({ url: '/pages/mine/mine' });
         } else {
           wx.redirectTo({ url: '/pages/remind/remind' });
         }
