@@ -8,6 +8,11 @@
     <view class='form_group'>
       <input placeholder="{{formFields.full_name}}" class='form_control' id='full_name' name='full_name' placeholder-class='input-placeholder'></input>
     </view>
+    <view class='tips_box'>
+      <text class='tip'>备注：</text>
+      <view class='tip'>*一网店输入6位店代码，二网店输入10位店代码，广汽本田员工输入招聘号。</view>
+      <view class='tip'>*因现场需要出示报名信息，请务必使用本人微信登入以完成报名流程</view>
+    </view>
     <view class='form_group'>
       <button formType="submit" class='btn'>
         <image src='../../images/btn_confirm.png' mode='widthFix'></image>

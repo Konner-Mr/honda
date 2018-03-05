@@ -1,7 +1,7 @@
 /* pages/login/login.wxss */
 .login .form_box{
   position:absolute;
-  top: 25%;
+  top: 38%;
 }
 
 .login .form_box .form_group{
@@ -15,3 +15,6 @@
   text-align: center;
   box-shadow:0px 0px 5px 3px rgba(0,0,0,.5) inset;
 }
+
+.tips_box{width: 79%;margin: -20rpx auto 40rpx;}
+.tip{color: #fff;font-size: 22rpx;}

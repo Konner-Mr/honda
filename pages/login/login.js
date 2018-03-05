@@ -37,9 +37,9 @@ Page({
         app.globalData.step = result.step;
         app.globalData.formData = result.formData;
         if (app.globalData.step == 0) {
-          wx.redirectTo({ url: '/pages/mine/mine' });
+          wx.switchTab({ url: '/pages/mine/mine' });
         } else {
-          wx.redirectTo({ url: '/pages/remind/remind' });
+          wx.switchTab({ url: '/pages/remind/remind' });
         }
       }
     });
